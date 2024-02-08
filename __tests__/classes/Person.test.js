@@ -24,13 +24,14 @@ test('should return an empty array of bags', () => {
     expect(person3.bags).toMatchObject([])
 })
 
-// //testing that addBags adds an item to the array
-// test('should return an array length of 1', () => {
-//     const name = "ibrahim"
-//     const destination = 'Chicago'
-//     const bag = new Bag()
-//     const person3 = new Person(name, destination, bag)
-//     expect(person3.bags).toMatchObject([])
-// })
+//testing that addBags adds an item to the array
+test('should return an array length of 1', () => {
+    const name = "ibrahim"
+    const destination = 'Chicago'
+    const bag = new Bag(100,3)
+    const person3 = new Person(name, destination)
+    person3.addBag(bag)
+    expect(person3.bags).toHaveLength(1)
+})
 
 })
